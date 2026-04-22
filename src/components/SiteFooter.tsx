@@ -32,6 +32,7 @@ export function SiteFooter() {
               {[
                 ["/exhibitions", "Exhibitions"],
                 ["/collections", "Collections"],
+                ["/book", "100 Miracle Book"],
                 ["/about", "About"],
                 ["/contact", "Contact"],
               ].map(([to, label]) => (
