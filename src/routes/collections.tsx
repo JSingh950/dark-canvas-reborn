@@ -50,7 +50,7 @@ function CollectionsPage() {
       </section>
 
       {/* FILTER BAR */}
-      <section className="sticky top-[68px] z-30 bg-background/95 border-y border-border">
+      <section className="sticky top-0 z-40 bg-background border-b border-border">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10 py-5 flex flex-wrap gap-x-8 gap-y-3">
           {FILTERS.map((f) => (
             <button
