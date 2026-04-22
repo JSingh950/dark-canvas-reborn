@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import galleryImg from "@/assets/gallery-interior.jpg";
-import cosmicImg from "@/assets/art-cosmic-pulse.jpg";
-import sacredImg from "@/assets/art-sacred-geometry.jpg";
+import { artImages } from "@/lib/art-images";
+
+const galleryImg = artImages.heartOfObangsaek;
+const cosmicImg = artImages.fieldsOfBeing;
+const sacredImg = artImages.aLineTowardYou;
 
 export const Route = createFileRoute("/exhibitions")({
   head: () => ({
