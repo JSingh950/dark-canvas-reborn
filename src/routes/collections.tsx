@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import cosmicImg from "@/assets/art-cosmic-pulse.jpg";
-import emergenceImg from "@/assets/art-emergence.jpg";
-import innerImg from "@/assets/art-inner-universe.jpg";
-import visionImg from "@/assets/art-vision-worlds.jpg";
-import sacredImg from "@/assets/art-sacred-geometry.jpg";
-import horseImg from "@/assets/art-leaping-horse.jpg";
+import { artImages } from "@/lib/art-images";
+
+const cosmicImg = artImages.fieldsOfBeing;
+const emergenceImg = artImages.birthOfNewHumanity;
+const innerImg = artImages.orbitOfExistence;
+const visionImg = artImages.eyeOfTheAbyss;
+const sacredImg = artImages.aLineTowardYou;
+const horseImg = artImages.energyOfUniverse;
 
 export const Route = createFileRoute("/collections")({
   head: () => ({
