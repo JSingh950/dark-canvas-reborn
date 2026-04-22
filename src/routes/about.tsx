@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import galleryImg from "@/assets/gallery-interior.jpg";
+import { artImages } from "@/lib/art-images";
+
+const galleryImg = artImages.heartOfObangsaek;
 
 export const Route = createFileRoute("/about")({
   head: () => ({
