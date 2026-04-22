@@ -11,22 +11,15 @@ const nav = [
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
-    let lastY = window.scrollY;
     const onScroll = () => {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        const y = window.scrollY;
-        setScrolled(y > 24);
-        if (y <= 10) setHidden(false);
-        else if (y > lastY && y > 80) setHidden(true);
-        else if (y < lastY) setHidden(false);
-        lastY = y;
+        setScrolled(window.scrollY > 24);
         ticking = false;
       });
     };
@@ -37,10 +30,10 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        hidden ? "-translate-y-full" : "translate-y-0"
-      } ${
-        scrolled ? "bg-background/95 border-b border-border" : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
+        scrolled
+          ? "bg-background/95 border-b border-border"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-10">
