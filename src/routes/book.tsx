@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { artImages } from "@/lib/art-images";
 
@@ -21,6 +21,30 @@ function ModelViewer({ src, poster, alt }: { src: string; poster?: string; alt?:
     ref: ref as any,
     className: "h-full w-full object-cover",
   });
+}
+
+function BookMedia({ poster }: { poster?: string }) {
+  const [showModel, setShowModel] = useState(false);
+  const cover = poster || "/book.png";
+
+  return (
+    <div className="h-full w-full relative">
+      {!showModel && (
+        <img src={cover} alt="100 Miracle book cover" className="h-full w-full object-cover" />
+      )}
+      {showModel && (
+        <ModelViewer src="/bookmodel.glb" poster={cover} alt="100 Miracle book model" />
+      )}
+      <div className="absolute left-4 bottom-4">
+        <button
+          onClick={() => setShowModel((s) => !s)}
+          className="bg-gold text-background px-4 py-2 text-[11px] uppercase tracking-[0.2em]"
+        >
+          {showModel ? "Show Cover" : "View 3D"}
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export const Route = createFileRoute("/book")({
@@ -107,11 +131,7 @@ function BookPage() {
 
           <div className="md:col-span-6">
             <div className="relative aspect-[4/5] overflow-hidden bg-card">
-              <ModelViewer
-                src="/bookmodel.glb"
-                poster={localCover || artImages.bookCover}
-                alt="100 Miracle book model by Kim Mi Hyo"
-              />
+              <BookMedia poster={localCover} />
               <div className="absolute inset-0 ring-1 ring-inset ring-border" />
             </div>
             <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground text-right">
