@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { loadGoogleTranslate, setGoogleTranslateCookie, getCurrentGoogleLang } from "@/lib/i18n";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -37,6 +38,25 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    // Load Google Translate widget (hidden) so we can toggle programmatically
+    try {
+      // create hidden container for the translate element if missing
+      if (!document.getElementById("google_translate_element")) {
+        const d = document.createElement("div");
+        d.id = "google_translate_element";
+        d.style.display = "none";
+        document.body.appendChild(d);
+      }
+      loadGoogleTranslate();
+      // initialize language state from cookie
+      const lang = getCurrentGoogleLang();
+      setLang(lang === "ko" ? "ko" : "en");
+    } catch (e) {
+      // ignore
+    }
+  }, []);
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
@@ -63,9 +83,24 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
-          <span className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-            KO / <span className="text-ivory">EN</span>
-          </span>
+          <button
+            onClick={() => {
+              const next = lang === "en" ? "ko" : "en";
+              try {
+                // set cookie to instruct Google Translate and reload to apply
+                setGoogleTranslateCookie(lang, next);
+                // reload to let Google Translate apply (required for cookie-based switch)
+                window.location.reload();
+              } catch (e) {
+                // fallback
+                setLang(next);
+              }
+            }}
+            className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground hover:text-gold transition-colors"
+          >
+            <span className={lang === "ko" ? "text-ivory" : ""}>KO</span> /{" "}
+            <span className={lang === "en" ? "text-ivory" : ""}>EN</span>
+          </button>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-ivory" aria-label="Menu">
