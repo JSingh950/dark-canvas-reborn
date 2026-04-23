@@ -6,7 +6,7 @@ const nav = [
   { to: "/exhibitions", label: "Exhibitions" },
   { to: "/collections", label: "Collections" },
   { to: "/news", label: "News" },
-  { to: "/book", label: "Book" },
+  { to: "/book", label: "100 Miracle" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -46,9 +46,6 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-10">
         <Link to="/" className="group flex items-center gap-3">
           <span className="font-display text-lg tracking-[0.25em] text-ivory">KIM MI HYO</span>
-          <span className="hidden md:inline text-[10px] tracking-[0.4em] text-muted-foreground">
-            GALLERY
-          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">
@@ -66,13 +63,6 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden md:flex items-center gap-6">
-          <Link
-            to="/contact"
-            className="text-[11px] uppercase tracking-[0.25em] text-ivory hover:text-gold transition-colors"
-          >
-            Inquire
-          </Link>
-          <span className="text-muted-foreground">|</span>
           <span className="text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
             KO / <span className="text-ivory">EN</span>
           </span>
