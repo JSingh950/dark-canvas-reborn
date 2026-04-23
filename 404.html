@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Page not found — Loading app…</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .center {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">Page not found — loading application…</div>
+
+    <script>
+      // SPA fallback for hosts that serve 404 for client routes.
+      (function () {
+        // Try to load the app shell (index.html) and replace the document.
+        fetch("/index.html", { cache: "no-store" })
+          .then(function (resp) {
+            if (!resp.ok) throw new Error("index fetch failed");
+            return resp.text();
+          })
+          .then(function (html) {
+            // Replace current document with the index.html content so the SPA boots.
+            document.open();
+            document.write(html);
+            document.close();
+          })
+          .catch(function () {
+            // If fetch fails, redirect to root as a last resort.
+            window.location.replace("/");
+          });
+      })();
+    </script>
+  </body>
+</html>
