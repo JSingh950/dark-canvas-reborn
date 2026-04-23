@@ -24,7 +24,7 @@ function ModelViewer({ src, poster, alt }: { src: string; poster?: string; alt?:
 }
 
 function BookMedia({ poster }: { poster?: string }) {
-  const [showModel, setShowModel] = useState(false);
+  const [showModel, setShowModel] = useState(true);
   const cover = poster || "/book.png";
 
   return (
