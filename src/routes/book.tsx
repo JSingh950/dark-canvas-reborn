@@ -1,3 +1,4 @@
+import React from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { artImages } from "@/lib/art-images";
 
@@ -83,24 +84,16 @@ function BookPage() {
 
           <div className="md:col-span-6">
             <div className="relative aspect-[4/5] overflow-hidden bg-card">
-              <model-viewer
-                src="/bookmodel.glb"
-                alt="100 Miracle book 3D model"
-                ar
-                ar-modes="webxr scene-viewer quick-look"
-                camera-controls
-                auto-rotate
-                interaction-policy="always"
-                exposure="1"
-                style={{ width: "100%", height: "100%" }}
-              >
-                {/* Fallback image for browsers that don't support model-viewer */}
-                <img
-                  src={artImages.bookCover}
-                  alt="100 Miracle book cover by Kim Mi Hyo"
-                  className="h-full w-full object-cover"
-                />
-              </model-viewer>
+              {React.createElement("model-viewer", {
+                src: "/bookmodel.glb",
+                poster: artImages.bookCover,
+                alt: "100 Miracle book model by Kim Mi Hyo",
+                class: "h-full w-full object-cover",
+                exposure: "1",
+                "camera-controls": true,
+                "auto-rotate": true,
+                "ar-modes": "webxr scene-viewer quick-look",
+              })}
               <div className="absolute inset-0 ring-1 ring-inset ring-border" />
             </div>
             <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground text-right">
