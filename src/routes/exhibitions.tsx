@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { artImages } from "@/lib/art-images";
 
 const galleryImg = artImages.heartOfObangsaek;
@@ -237,9 +237,12 @@ function ExhibitionsPage() {
               <p className="mt-8 text-sm text-muted-foreground">{e.artist}</p>
               <p className="mt-1 text-sm text-ivory">{e.dates}</p>
               <p className="mt-1 text-sm text-muted-foreground">{e.venue}</p>
-              <button className="mt-10 inline-flex items-center gap-3 border-b border-gold pb-1 text-[11px] uppercase tracking-[0.3em] text-ivory hover:text-gold transition-colors">
+              <Link
+                to="/collections"
+                className="mt-10 inline-flex items-center gap-3 border-b border-gold pb-1 text-[11px] uppercase tracking-[0.3em] text-ivory hover:text-gold transition-colors"
+              >
                 View Details <span aria-hidden>→</span>
-              </button>
+              </Link>
             </div>
           </article>
         ))}

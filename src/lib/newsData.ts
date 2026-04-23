@@ -11,6 +11,55 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    id: "scotsman-edinburgh-2025",
+    title: "Edinburgh Art Fair 2025: Kim Mi Hyo Gallery Returns",
+    date: "September 9, 2025",
+    category: "Press",
+    excerpt:
+      "The Scotsman highlights Kim Mi Hyo Gallery's return to Edinburgh Art Fair, noting the gallery's unique roster and wide appeal.",
+    content:
+      "The Scotsman coverage of Edinburgh Art Fair 2025 notes the Kim Mi Hyo Gallery's strong presence and describes the booth as a highlight for collectors seeking distinctive work.",
+    sourceUrl:
+      "https://www.scotsman.com/arts-and-culture/art/edinburgh-art-fair-2025-hundreds-of-works-you-cant-see-anywhere-else-in-scotland-5309537",
+  },
+  {
+    id: "thewfy-edinburgh-2025",
+    title: "Edinburgh Art Fair: The Best Art Now On Display",
+    date: "September 2025",
+    category: "Press",
+    excerpt: "The WFY named Kim Mi Hyo Gallery among notable presentations at Edinburgh Art Fair.",
+    content:
+      "Coverage highlights the gallery's role as a bridge between South Korea's contemporary scene and international audiences.",
+    sourceUrl: "https://thewfy.com/edinburgh-art-fair-the-best-art-now-on-display/",
+  },
+  {
+    id: "pressreader-scotsman-20250913",
+    title: "Amazing Art for Every Wall — The Scotsman / Pressreader",
+    date: "September 13, 2025",
+    category: "Press",
+    excerpt:
+      "PressReader republishes Scotsman coverage noting Kim Mi Hyo Gallery's participation and the fair's international scope.",
+    sourceUrl: "https://www.pressreader.com/uk/the-scotsman/20250913/282840787193419",
+  },
+  {
+    id: "art-gwangju-profile-2024",
+    title: "Kim Mi Hyo Gallery — Art Gwangju Profile",
+    date: "September 13, 2024",
+    category: "Press",
+    excerpt:
+      "Art Gwangju lists Kim Mi Hyo Gallery in its directory and highlights the gallery's programming.",
+    sourceUrl: "https://artgwangju.kr/en/galleries/kim-mi-hyo-gallery/",
+  },
+  {
+    id: "instagram-world-art-dubai-2025",
+    title: "World Art Dubai 2025 — Instagram Reports",
+    date: "April 17, 2025",
+    category: "Social",
+    excerpt:
+      "Instagram posts and reels documented Kim Mi Hyo Gallery's participation at World Art Dubai (Stand JC07).",
+    sourceUrl: "https://www.instagram.com/reel/DIj7C5MTENP/",
+  },
+  {
     id: "world-art-dubai-2025",
     title: "Kim Mi Hyo Gallery at World Art Dubai 2025",
     date: "April 17, 2025",

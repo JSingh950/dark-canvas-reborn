@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { artImages } from "@/lib/art-images";
 
 export const Route = createFileRoute("/book")({
@@ -66,18 +66,18 @@ function BookPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-6">
-              <a
-                href="mailto:Hoaga123@naver.com?subject=Reserve:%20100%20Miracle%20book"
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-3 bg-gold text-background px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-gold/90 transition-colors"
               >
-                Reserve by email →
-              </a>
-              <a
-                href="mailto:Hoaga123@naver.com?subject=Question:%20100%20Miracle%20book"
+                Reserve →
+              </Link>
+              <Link
+                to="/contact"
                 className="inline-flex items-center gap-3 border border-border text-ivory px-8 py-4 text-[10px] uppercase tracking-[0.3em] hover:border-gold hover:text-gold transition-colors"
               >
                 Contact the gallery
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -174,12 +174,12 @@ function BookPage() {
           <p className="mt-6 text-muted-foreground">
             We would rather answer in person than leave you guessing at checkout.
           </p>
-          <a
-            href="mailto:Hoaga123@naver.com?subject=Question:%20100%20Miracle%20book"
+          <Link
+            to="/contact"
             className="mt-10 inline-flex items-center gap-3 border-b border-gold pb-1 text-[11px] uppercase tracking-[0.3em] text-ivory hover:text-gold transition-colors"
           >
             Write to the gallery →
-          </a>
+          </Link>
         </div>
       </section>
     </>

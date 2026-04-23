@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { artImages, collections } from "@/lib/art-images";
 
@@ -115,12 +115,12 @@ function CollectionsPage() {
                     {w.title}
                   </h3>
                   <p className="mt-1 text-xs text-muted-foreground">Kim Mi Hyo</p>
-                  <a
-                    href={`mailto:Hoaga123@naver.com?subject=Inquiry:%20${encodeURIComponent(w.title)}`}
+                  <Link
+                    to="/contact"
                     className="mt-4 inline-block text-[10px] uppercase tracking-[0.3em] text-muted-foreground border-b border-border hover:text-gold hover:border-gold transition-colors pb-1"
                   >
                     Inquire →
-                  </a>
+                  </Link>
                 </article>
               ))}
             </div>
