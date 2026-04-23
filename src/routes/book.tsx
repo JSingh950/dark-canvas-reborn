@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { artImages } from "@/lib/art-images";
+
+function ModelViewer({ src, poster, alt }: { src: string; poster?: string; alt?: string }) {
+  const ref = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const el = ref.current as HTMLElement | null;
+    if (!el) return;
+    // Ensure required attributes (including hyphenated ones) are set on the element
+    el.setAttribute("src", src);
+    if (poster) el.setAttribute("poster", poster);
+    if (alt) el.setAttribute("alt", alt);
+    el.setAttribute("ar-modes", "webxr scene-viewer quick-look");
+    el.setAttribute("camera-controls", "");
+    el.setAttribute("auto-rotate", "");
+    el.setAttribute("exposure", "1");
+  }, [src, poster, alt]);
+
+  return <model-viewer ref={ref as any} className="h-full w-full object-cover" />;
+}
 
 export const Route = createFileRoute("/book")({
   head: () => ({
@@ -84,16 +103,11 @@ function BookPage() {
 
           <div className="md:col-span-6">
             <div className="relative aspect-[4/5] overflow-hidden bg-card">
-              {React.createElement("model-viewer", {
-                src: "/bookmodel.glb",
-                poster: artImages.bookCover,
-                alt: "100 Miracle book model by Kim Mi Hyo",
-                class: "h-full w-full object-cover",
-                exposure: "1",
-                "camera-controls": true,
-                "auto-rotate": true,
-                "ar-modes": "webxr scene-viewer quick-look",
-              })}
+              <ModelViewer
+                src="/bookmodel.glb"
+                poster={artImages.bookCover}
+                alt="100 Miracle book model by Kim Mi Hyo"
+              />
               <div className="absolute inset-0 ring-1 ring-inset ring-border" />
             </div>
             <p className="mt-4 text-[10px] uppercase tracking-[0.3em] text-muted-foreground text-right">
