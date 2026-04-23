@@ -18,7 +18,10 @@ function ModelViewer({ src, poster, alt }: { src: string; poster?: string; alt?:
     el.setAttribute("exposure", "1");
   }, [src, poster, alt]);
 
-  return <model-viewer ref={ref as any} className="h-full w-full object-cover" />;
+  return React.createElement("model-viewer", {
+    ref: ref as any,
+    className: "h-full w-full object-cover",
+  });
 }
 
 export const Route = createFileRoute("/book")({
