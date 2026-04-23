@@ -8,7 +8,6 @@ function ModelViewer({ src, poster, alt }: { src: string; poster?: string; alt?:
   useEffect(() => {
     const el = ref.current as HTMLElement | null;
     if (!el) return;
-    // Ensure required attributes (including hyphenated ones) are set on the element
     el.setAttribute("src", src);
     if (poster) el.setAttribute("poster", poster);
     if (alt) el.setAttribute("alt", alt);
@@ -39,13 +38,15 @@ export const Route = createFileRoute("/book")({
         content:
           "Evocative paintings alongside reflections on creativity, resilience, and quiet wonder.",
       },
-      { property: "og:image", content: artImages.bookCover },
+      { property: "og:image", content: "/book.png" },
     ],
   }),
   component: BookPage,
 });
 
 function BookPage() {
+  const localCover = "/book.png";
+
   return (
     <>
       {/* HERO */}
@@ -108,7 +109,7 @@ function BookPage() {
             <div className="relative aspect-[4/5] overflow-hidden bg-card">
               <ModelViewer
                 src="/bookmodel.glb"
-                poster={artImages.bookCover}
+                poster={localCover || artImages.bookCover}
                 alt="100 Miracle book model by Kim Mi Hyo"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-border" />
@@ -191,12 +192,9 @@ function BookPage() {
       <section className="border-t border-border py-32">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-ivory text-balance max-w-3xl mx-auto leading-[1.15]">
-            Questions about payment, timing, or international{" "}
-            <em className="text-gold">shipping?</em>
+            Questions about payment, timing, or international <em className="text-gold">shipping?</em>
           </h2>
-          <p className="mt-6 text-muted-foreground">
-            We would rather answer in person than leave you guessing at checkout.
-          </p>
+          <p className="mt-6 text-muted-foreground">We would rather answer in person than leave you guessing at checkout.</p>
           <Link
             to="/contact"
             className="mt-10 inline-flex items-center gap-3 border-b border-gold pb-1 text-[11px] uppercase tracking-[0.3em] text-ivory hover:text-gold transition-colors"
@@ -208,3 +206,5 @@ function BookPage() {
     </>
   );
 }
+
+export default BookPage;
