@@ -59,13 +59,116 @@ const exhibitionsTimeline = [
         title: "Cosmic Pulse: Selected Works",
         venue: "Kim Mi Hyo Gallery, Jinju",
       },
-      { date: "Apr 17, 2025", title: "World Art Dubai 2025", venue: "Dubai World Trade Centre" },
+      {
+        date: "Apr 17, 2025",
+        title: "Moon · Light · Island — World Art Dubai JC07",
+        venue: "Dubai World Trade Centre",
+      },
       { date: "Apr 12 – Jun 8, 2025", title: "The Dreaming Eye", venue: "Main Hall, Jinju" },
     ],
   },
   {
     year: 2024,
-    events: [{ date: "Oct 23, 2024", title: "Art Gwangju 2024: Booth D-21", venue: "Gwangju" }],
+    events: [
+      {
+        date: "Oct 23, 2024",
+        title: "Art Gwangju 2024: Booth D-21",
+        venue: "Kimdaejung Convention Centre, Gwangju",
+      },
+      {
+        date: "2024",
+        title: "Emptiness and Joy — Art Gwangju D-21",
+        venue: "Kimdaejung Convention Centre, Gwangju",
+      },
+    ],
+  },
+  {
+    year: 2023,
+    events: [
+      { date: "2023", title: "Sacred Geometries", venue: "Kim Mi Hyo Gallery, Jinju" },
+      { date: "2023", title: "Vision Worlds", venue: "Seoul Art Fair, Seoul" },
+    ],
+  },
+  {
+    year: 2022,
+    events: [{ date: "2022", title: "Emergence: New Works", venue: "Busan Art Fair, Busan" }],
+  },
+  {
+    year: 2012,
+    events: [
+      {
+        date: "2012",
+        title: "100 Korea Women's Exhibition",
+        venue: "Heterozygous Art Center, Seoul",
+      },
+    ],
+  },
+  {
+    year: 2011,
+    events: [
+      {
+        date: "2011",
+        title: "Invited Exhibition",
+        venue: "Heterozygous Arts Center, Seoul",
+        note: "Invited",
+      },
+      {
+        date: "2011",
+        title: "Invited Exhibition — Artist of the Year",
+        venue: "Heterozygous Art Center, Seoul",
+        note: "Award",
+      },
+    ],
+  },
+  {
+    year: 2010,
+    events: [
+      {
+        date: "2010",
+        title: "Korea–China Exchange Exhibition",
+        venue: "Cultural Arts Center, Jinju",
+      },
+    ],
+  },
+  {
+    year: 2005,
+    events: [
+      {
+        date: "2005",
+        title: "Jinju Fine Arts Association Exhibition",
+        venue: "Cultural Arts Center, Jinju",
+      },
+    ],
+  },
+  {
+    year: 2002,
+    events: [
+      { date: "2002", title: "Nine Nude Drawing", venue: "Pay Gallery, Jinju", note: "Solo" },
+      {
+        date: "2002",
+        title: "Western Painting Artists",
+        venue: "Jinju Cultural and Arts Center, Jinju",
+        note: "Group",
+      },
+      { date: "2002", title: "Esprit de Corée V", venue: "Paris, France", note: "Group" },
+    ],
+  },
+  {
+    year: 1994,
+    events: [
+      { date: "1994", title: "Human-art 94", venue: "Cultural Arts Center, Busan", note: "Group" },
+    ],
+  },
+  {
+    year: 1989,
+    events: [
+      {
+        date: "1989–1994",
+        title: "Early Career Group Exhibitions",
+        venue: "Various venues · Busan & Jinju, South Korea",
+        note: "Group",
+      },
+    ],
   },
   { year: 2007, events: [{ date: "2007", title: "Gallery Founded", venue: "Jinju, South Korea" }] },
 ];
