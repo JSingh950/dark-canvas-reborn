@@ -33,7 +33,12 @@ function BookMedia({ poster }: { poster?: string }) {
         <img src={cover} alt="100 Miracle book cover" className="h-full w-full object-cover" />
       )}
       {showModel && (
-        <ModelViewer src="/bookmodel.glb" poster={cover} alt="100 Miracle book model" />
+        <iframe
+          src="/book_3d.html"
+          title="100 Miracle 3D book"
+          className="absolute inset-0 w-full h-full border-0"
+          style={{ width: '100%', height: '100%' }}
+        />
       )}
       <div className="absolute left-4 bottom-4">
         <button
