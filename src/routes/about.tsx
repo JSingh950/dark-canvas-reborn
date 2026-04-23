@@ -1,7 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { artImages } from "@/lib/art-images";
-
-const galleryImg = artImages.heartOfObangsaek;
+import artistMom from "../../artistmom.JPEG";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -40,8 +38,8 @@ function AboutPage() {
       <section className="mx-auto max-w-[1600px] px-6 md:px-10 pb-24">
         <div className="relative aspect-[21/9] overflow-hidden">
           <img
-            src={galleryImg}
-            alt="Gallery interior"
+            src={artistMom}
+            alt="Portrait of Mi Hyo Kim"
             className="h-full w-full object-cover"
             loading="lazy"
           />
