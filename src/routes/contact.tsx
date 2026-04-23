@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -22,38 +21,35 @@ function ContactPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const key = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-    if (key) emailjs.init(key);
-  }, []);
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError("");
 
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const subject = formData.get("subject");
-    const message = formData.get("message");
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
-      await emailjs.send("service_dark_canvas", "template_contact_form", {
-        from_name: name,
-        from_email: email,
-        subject: subject,
-        message: message,
-        to_email: "Kimmihyo1@gmail.com",
+      // Use FormSubmit AJAX endpoint
+      const resp = await fetch("https://formsubmit.co/ajax/Kimmihyo1@gmail.com", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
       });
 
+      const json = await resp.json();
+      if (!resp.ok) throw new Error(json.message || "Failed to send");
+
       setSent(true);
-      (e.target as HTMLFormElement).reset();
-      // Reset sent message after 5 seconds
+      form.reset();
       setTimeout(() => setSent(false), 5000);
     } catch (err) {
-      setError("Failed to send message. Please try again or email us directly.");
       console.error(err);
+      setError(
+        "Failed to send message. Please try again or email us directly at Kimmihyo1@gmail.com.",
+      );
     } finally {
       setLoading(false);
     }
