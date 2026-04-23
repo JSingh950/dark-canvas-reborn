@@ -40,15 +40,11 @@ export function SiteHeader() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         hidden ? "-translate-y-full" : "translate-y-0"
-      } ${
-        scrolled ? "bg-background/95 border-b border-border" : "bg-transparent"
-      }`}
+      } ${scrolled ? "bg-background/95 border-b border-border" : "bg-transparent"}`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-5 md:px-10">
         <Link to="/" className="group flex items-center gap-3">
-          <span className="font-display text-lg tracking-[0.25em] text-ivory">
-            KIM MI HYO
-          </span>
+          <span className="font-display text-lg tracking-[0.25em] text-ivory">KIM MI HYO</span>
           <span className="hidden md:inline text-[10px] tracking-[0.4em] text-muted-foreground">
             GALLERY
           </span>
@@ -81,15 +77,15 @@ export function SiteHeader() {
           </span>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-ivory"
-          aria-label="Menu"
-        >
+        <button onClick={() => setOpen(!open)} className="md:hidden text-ivory" aria-label="Menu">
           <div className="space-y-1.5">
-            <span className={`block h-px w-6 bg-current transition ${open ? "translate-y-[6px] rotate-45" : ""}`} />
+            <span
+              className={`block h-px w-6 bg-current transition ${open ? "translate-y-[6px] rotate-45" : ""}`}
+            />
             <span className={`block h-px w-6 bg-current transition ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-px w-6 bg-current transition ${open ? "-translate-y-[6px] -rotate-45" : ""}`} />
+            <span
+              className={`block h-px w-6 bg-current transition ${open ? "-translate-y-[6px] -rotate-45" : ""}`}
+            />
           </div>
         </button>
       </div>

@@ -9,9 +9,15 @@ export const Route = createFileRoute("/exhibitions")({
   head: () => ({
     meta: [
       { title: "Exhibitions — Kim Mi Hyo Gallery" },
-      { name: "description", content: "Current and upcoming exhibitions at Kim Mi Hyo Gallery, Jinju, South Korea." },
+      {
+        name: "description",
+        content: "Current and upcoming exhibitions at Kim Mi Hyo Gallery, Jinju, South Korea.",
+      },
       { property: "og:title", content: "Exhibitions — Kim Mi Hyo Gallery" },
-      { property: "og:description", content: "Current and upcoming exhibitions in Jinju and abroad." },
+      {
+        property: "og:description",
+        content: "Current and upcoming exhibitions in Jinju and abroad.",
+      },
     ],
   }),
   component: ExhibitionsPage,
@@ -53,8 +59,8 @@ function ExhibitionsPage() {
           Exhibitions
         </h1>
         <p className="mt-8 max-w-2xl text-muted-foreground">
-          A continuous dialogue between artist and viewer — selected
-          presentations across our home in Jinju and partner spaces worldwide.
+          A continuous dialogue between artist and viewer — selected presentations across our home
+          in Jinju and partner spaces worldwide.
         </p>
       </section>
 

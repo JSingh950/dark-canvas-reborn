@@ -10,17 +10,18 @@ export function SiteFooter() {
               Founded on <em className="text-gold">infinite</em> possibility.
             </p>
             <p className="mt-6 max-w-md text-sm text-muted-foreground leading-relaxed">
-              Jinju, South Korea — Est. 2007. A gallery dedicated to Korean and
-              international contemporary art, building bridges across culture
-              and consciousness.
+              Jinju, South Korea — Est. 2007. A gallery dedicated to Korean and international
+              contemporary art, building bridges across culture and consciousness.
             </p>
           </div>
 
           <div className="md:col-span-3 md:col-start-7">
             <p className="text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Visit</p>
             <p className="text-sm text-ivory leading-relaxed">
-              Kim Mi Hyo Gallery<br />
-              Jinju-si, Gyeongsangnam-do<br />
+              Kim Mi Hyo Gallery
+              <br />
+              Jinju-si, Gyeongsangnam-do
+              <br />
               South Korea
             </p>
             <p className="mt-5 text-sm text-muted-foreground">Tue–Sun · 11–18</p>

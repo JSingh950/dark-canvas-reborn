@@ -5,9 +5,17 @@ export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
       { title: "100 Miracle — A Monograph by Kim Mi Hyo" },
-      { name: "description", content: "100 Miracle: a visual memoir and monograph by Kim Mi Hyo. Hardcover, limited run — reserve directly through the gallery." },
+      {
+        name: "description",
+        content:
+          "100 Miracle: a visual memoir and monograph by Kim Mi Hyo. Hardcover, limited run — reserve directly through the gallery.",
+      },
       { property: "og:title", content: "100 Miracle — A Monograph by Kim Mi Hyo" },
-      { property: "og:description", content: "Evocative paintings alongside reflections on creativity, resilience, and quiet wonder." },
+      {
+        property: "og:description",
+        content:
+          "Evocative paintings alongside reflections on creativity, resilience, and quiet wonder.",
+      },
       { property: "og:image", content: artImages.bookCover },
     ],
   }),
@@ -28,10 +36,9 @@ function BookPage() {
               100 <em className="text-gold">Miracle</em>
             </h1>
             <p className="mt-8 max-w-lg text-base text-muted-foreground leading-relaxed">
-              A visual memoir and monograph: evocative paintings alongside
-              reflections on creativity, resilience, and quiet wonder. For
-              anyone who wants the next page to feel different — and for shelves
-              that hold more than objects.
+              A visual memoir and monograph: evocative paintings alongside reflections on
+              creativity, resilience, and quiet wonder. For anyone who wants the next page to feel
+              different — and for shelves that hold more than objects.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
@@ -45,14 +52,17 @@ function BookPage() {
             </div>
 
             <div className="mt-12 border-t border-border pt-8">
-              <p className="font-display text-5xl text-ivory">$75.00 <span className="text-base text-muted-foreground tracking-normal">USD</span></p>
-              <p className="mt-3 text-xs text-muted-foreground">+ shipping · sold through the gallery</p>
+              <p className="font-display text-5xl text-ivory">
+                $75.00 <span className="text-base text-muted-foreground tracking-normal">USD</span>
+              </p>
+              <p className="mt-3 text-xs text-muted-foreground">
+                + shipping · sold through the gallery
+              </p>
             </div>
 
             <p className="mt-8 max-w-md text-sm text-muted-foreground leading-relaxed">
-              Email your city and how many copies you need. We confirm
-              availability, send a total with careful packing and courier
-              options, and arrange payment by invoice.
+              Email your city and how many copies you need. We confirm availability, send a total
+              with careful packing and courier options, and arrange payment by invoice.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-6">
@@ -99,18 +109,26 @@ function BookPage() {
             </div>
             <div className="md:col-span-7 md:col-start-6 flex items-end">
               <p className="text-muted-foreground leading-relaxed">
-                You are not clicking "buy now" into the void — you are starting
-                a conversation with the gallery. We handle each request
-                personally.
+                You are not clicking "buy now" into the void — you are starting a conversation with
+                the gallery. We handle each request personally.
               </p>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {[
-              { n: "1", body: "Send one email: your country, number of copies, and one line about why this book found you now." },
-              { n: "2", body: "We reply with stock confirmation, price, shipping estimate, and payment options." },
-              { n: "3", body: "Once reserved, your copy is packed like a work leaving the wall — pickup in Jinju or delivery worldwide." },
+              {
+                n: "1",
+                body: "Send one email: your country, number of copies, and one line about why this book found you now.",
+              },
+              {
+                n: "2",
+                body: "We reply with stock confirmation, price, shipping estimate, and payment options.",
+              },
+              {
+                n: "3",
+                body: "Once reserved, your copy is packed like a work leaving the wall — pickup in Jinju or delivery worldwide.",
+              },
             ].map((s) => (
               <div key={s.n} className="bg-background p-12">
                 <span className="font-display text-7xl text-gold/60">{s.n}</span>
@@ -150,7 +168,8 @@ function BookPage() {
       <section className="border-t border-border py-32">
         <div className="mx-auto max-w-[1600px] px-6 md:px-10 text-center">
           <h2 className="font-display text-4xl md:text-5xl text-ivory text-balance max-w-3xl mx-auto leading-[1.15]">
-            Questions about payment, timing, or international <em className="text-gold">shipping?</em>
+            Questions about payment, timing, or international{" "}
+            <em className="text-gold">shipping?</em>
           </h2>
           <p className="mt-6 text-muted-foreground">
             We would rather answer in person than leave you guessing at checkout.

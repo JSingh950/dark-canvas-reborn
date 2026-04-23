@@ -39,7 +39,10 @@ export const Route = createRootRoute({
       },
       { name: "author", content: "Kim Mi Hyo Gallery" },
       { property: "og:title", content: "Kim Mi Hyo Gallery" },
-      { property: "og:description", content: "Contemporary art from Jinju, South Korea — since 2007." },
+      {
+        property: "og:description",
+        content: "Contemporary art from Jinju, South Korea — since 2007.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

@@ -6,9 +6,16 @@ export const Route = createFileRoute("/collections")({
   head: () => ({
     meta: [
       { title: "Collections — Kim Mi Hyo Gallery" },
-      { name: "description", content: "Seven thematic collections tracing the arc of Mi Hyo Kim's practice — from meditative field paintings to visionary dreamscapes." },
+      {
+        name: "description",
+        content:
+          "Seven thematic collections tracing the arc of Mi Hyo Kim's practice — from meditative field paintings to visionary dreamscapes.",
+      },
       { property: "og:title", content: "Collections — Kim Mi Hyo Gallery" },
-      { property: "og:description", content: "Seven thematic collections — over 50 works of contemporary Korean art." },
+      {
+        property: "og:description",
+        content: "Seven thematic collections — over 50 works of contemporary Korean art.",
+      },
       { property: "og:image", content: artImages.heartOfObangsaek },
     ],
   }),
@@ -37,14 +44,15 @@ function CollectionsPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/40" />
         </div>
         <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10 pt-44 pb-20">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">Kim Mi Hyo Gallery</p>
+          <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">
+            Kim Mi Hyo Gallery
+          </p>
           <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] text-ivory text-balance">
             Collections
           </h1>
           <p className="mt-8 max-w-2xl text-muted-foreground leading-relaxed">
-            Seven thematic collections tracing the arc of Mi Hyo Kim's practice —
-            from meditative field paintings to visionary dreamscapes and the
-            forces of emergence.
+            Seven thematic collections tracing the arc of Mi Hyo Kim's practice — from meditative
+            field paintings to visionary dreamscapes and the forces of emergence.
           </p>
         </div>
       </section>
@@ -78,7 +86,9 @@ function CollectionsPage() {
               </div>
               <div className="md:col-span-7">
                 <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-4">{c.caption}</p>
-                <h2 className="font-display text-5xl md:text-6xl text-ivory text-balance">{c.title}</h2>
+                <h2 className="font-display text-5xl md:text-6xl text-ivory text-balance">
+                  {c.title}
+                </h2>
                 <p className="mt-6 text-muted-foreground leading-relaxed max-w-xl">{c.body}</p>
               </div>
               <div className="md:col-span-3 flex md:justify-end md:items-end">

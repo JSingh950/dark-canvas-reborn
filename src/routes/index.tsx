@@ -19,31 +19,76 @@ export const Route = createFileRoute("/")({
           "Korean and international contemporary art from Jinju, South Korea. Explore exhibitions, collections, and the philosophy of infinite potential.",
       },
       { property: "og:title", content: "Kim Mi Hyo Gallery — Art That Lives Between Worlds" },
-      { property: "og:description", content: "Contemporary art from Jinju, South Korea — since 2007." },
+      {
+        property: "og:description",
+        content: "Contemporary art from Jinju, South Korea — since 2007.",
+      },
     ],
   }),
   component: HomePage,
 });
 
 const marqueeItems = [
-  "Cosmic Pulse", "Emergence", "Inner Universe", "Vision Worlds",
-  "The Dreaming Eye", "Sacred Geometry", "Horizon & Threshold",
-  "World Art Dubai 2025", "Art Gwangju 2024", "100+ Exhibitions",
-  "Est. Jinju 2007", "Artist of the Year 2011",
+  "Cosmic Pulse",
+  "Emergence",
+  "Inner Universe",
+  "Vision Worlds",
+  "The Dreaming Eye",
+  "Sacred Geometry",
+  "Horizon & Threshold",
+  "World Art Dubai 2025",
+  "Art Gwangju 2024",
+  "100+ Exhibitions",
+  "Est. Jinju 2007",
+  "Artist of the Year 2011",
 ];
 
 const collections = [
-  { num: "I", title: "Cosmic Pulse", caption: "Infinite texture, infinite depth", count: 3, img: cosmicImg },
-  { num: "II", title: "Emergence", caption: "Life force made visible", count: 2, img: emergenceImg },
-  { num: "III", title: "Inner Universe", caption: "The architecture of the self", count: 3, img: innerImg },
-  { num: "IV", title: "Vision Worlds", caption: "The labyrinth of the subconscious", count: 3, img: visionImg },
-  { num: "V", title: "Sacred Geometry", caption: "Order beneath all things", count: 4, img: sacredImg },
+  {
+    num: "I",
+    title: "Cosmic Pulse",
+    caption: "Infinite texture, infinite depth",
+    count: 3,
+    img: cosmicImg,
+  },
+  {
+    num: "II",
+    title: "Emergence",
+    caption: "Life force made visible",
+    count: 2,
+    img: emergenceImg,
+  },
+  {
+    num: "III",
+    title: "Inner Universe",
+    caption: "The architecture of the self",
+    count: 3,
+    img: innerImg,
+  },
+  {
+    num: "IV",
+    title: "Vision Worlds",
+    caption: "The labyrinth of the subconscious",
+    count: 3,
+    img: visionImg,
+  },
+  {
+    num: "V",
+    title: "Sacred Geometry",
+    caption: "Order beneath all things",
+    count: 4,
+    img: sacredImg,
+  },
 ];
 
 const news = [
   { tag: "Fair", title: "Kim Mi Hyo Gallery at World Art Dubai 2025", date: "April 17, 2025" },
   { tag: "Fair", title: "Art Gwangju 2024 · Booth D-21", date: "October 23, 2024" },
-  { tag: "Essay", title: "The Philosophy of Zero: Infinite Potential as Artistic Mission", date: "March 2025" },
+  {
+    tag: "Essay",
+    title: "The Philosophy of Zero: Infinite Potential as Artistic Mission",
+    date: "March 2025",
+  },
 ];
 
 function HomePage() {
@@ -73,9 +118,8 @@ function HomePage() {
               Between <em className="text-gold">Worlds</em>
             </h1>
             <p className="mt-8 max-w-lg text-base text-muted-foreground leading-relaxed">
-              Kim Mi Hyo Gallery presents Korean and international contemporary
-              art — building bridges across culture, consciousness and creative
-              tradition since 2007.
+              Kim Mi Hyo Gallery presents Korean and international contemporary art — building
+              bridges across culture, consciousness and creative tradition since 2007.
             </p>
             <div className="mt-10 flex items-center gap-8">
               <Link
@@ -83,7 +127,9 @@ function HomePage() {
                 className="group inline-flex items-center gap-3 border-b border-gold pb-1 text-[11px] uppercase tracking-[0.3em] text-ivory hover:text-gold transition-colors"
               >
                 Explore Collections
-                <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
+                <span aria-hidden className="transition-transform group-hover:translate-x-1">
+                  →
+                </span>
               </Link>
               <Link
                 to="/exhibitions"
@@ -176,11 +222,7 @@ function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {collections.slice(0, 4).map((c) => (
-              <Link
-                key={c.title}
-                to="/collections"
-                className="group block"
-              >
+              <Link key={c.title} to="/collections" className="group block">
                 <div className="relative aspect-[3/4] overflow-hidden mb-5">
                   <img
                     src={c.img}
@@ -191,7 +233,9 @@ function HomePage() {
                     height={1280}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
-                  <span className="absolute top-4 left-4 font-display text-2xl text-ivory">{c.num}</span>
+                  <span className="absolute top-4 left-4 font-display text-2xl text-ivory">
+                    {c.num}
+                  </span>
                 </div>
                 <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                   {c.num} · {c.caption}
@@ -214,9 +258,8 @@ function HomePage() {
           </div>
           <div className="md:col-span-9">
             <blockquote className="font-display text-3xl md:text-5xl leading-[1.2] text-ivory text-balance">
-              "The number zero is not empty — it is infinite potential, the
-              space where every possibility begins. Art lives in that same
-              space: between what is and what could be."
+              "The number zero is not empty — it is infinite potential, the space where every
+              possibility begins. Art lives in that same space: between what is and what could be."
             </blockquote>
             <p className="mt-10 text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
               — Mi Hyo Kim, Director & Founder
@@ -236,7 +279,10 @@ function HomePage() {
           </div>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {news.map((n, i) => (
-              <article key={i} className="bg-background p-10 hover:bg-card transition-colors group cursor-pointer">
+              <article
+                key={i}
+                className="bg-background p-10 hover:bg-card transition-colors group cursor-pointer"
+              >
                 <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">{n.tag}</p>
                 <h3 className="font-display text-2xl md:text-3xl text-ivory group-hover:text-gold transition-colors leading-tight text-balance">
                   {n.title}
@@ -260,7 +306,9 @@ function HomePage() {
           ].map(([n, l]) => (
             <div key={l} className="border-l border-gold/40 pl-8">
               <p className="font-display text-7xl md:text-8xl text-ivory leading-none">{n}</p>
-              <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-muted-foreground">{l}</p>
+              <p className="mt-4 text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+                {l}
+              </p>
             </div>
           ))}
         </div>

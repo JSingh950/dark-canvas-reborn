@@ -107,13 +107,19 @@ export const collections: Collection[] = [
     caption: "Body as landscape, landscape as body",
     body: "Figures dissolve into and emerge from fields of colour and mark. The body becomes a territory of emotion, memory, and longing.",
     works: [
-      { title: "Dancing In The Celestial Garden", img: `${BASE}/92da99f97_DancingInTheCelestialGarden.jpg` },
+      {
+        title: "Dancing In The Celestial Garden",
+        img: `${BASE}/92da99f97_DancingInTheCelestialGarden.jpg`,
+      },
       { title: "Birth Of A New Humanity", img: `${BASE}/fa435309c_BirthOfANewHumanity.jpg` },
       { title: "Break Free From The Egg", img: `${BASE}/51a36c947_BreakFreeFromTheEgg.jpg` },
       { title: "Woman On The Grass", img: `${BASE}/f87246eef_WomanOnTheGrass.jpg` },
       { title: "Woman With The Moon", img: `${BASE}/e0709cd30_WomanWithTheMoon.jpg` },
       { title: "The Fall Of An Angel", img: `${BASE}/444fa2580_TheFallOfAnAngel.jpg` },
-      { title: "From Softness To Boundlessness", img: `${BASE}/a5a42baf4_FromSoftnessToBoundlessness.jpg` },
+      {
+        title: "From Softness To Boundlessness",
+        img: `${BASE}/a5a42baf4_FromSoftnessToBoundlessness.jpg`,
+      },
       { title: "The Kiss", img: `${BASE}/4050a49c1_TheKiss.jpg` },
     ],
   },
@@ -129,7 +135,10 @@ export const collections: Collection[] = [
       { title: "Dream Of Hope", img: `${BASE}/22e37dce9_DreamOfHope.jpg` },
       { title: "Freedom Of Consciousness", img: `${BASE}/593f7c3ac_FreedomOfConsciousness.jpg` },
       { title: "Life Is An Unknowable Maze", img: `${BASE}/e6e6e8fac_LifeIsAnUnknowableMaze.jpg` },
-      { title: "The Landscape Between Cracks", img: `${BASE}/6f88c234e_TheLandscapeBetweenCracks.jpg` },
+      {
+        title: "The Landscape Between Cracks",
+        img: `${BASE}/6f88c234e_TheLandscapeBetweenCracks.jpg`,
+      },
       { title: "The Landscape Of My Heart", img: `${BASE}/e3704a6a4_TheLandscapeOfMyHeart.jpg` },
       { title: "The Soul Walks In Circles", img: `${BASE}/8c188028f_TheSoulWalksInCircles.jpg` },
     ],

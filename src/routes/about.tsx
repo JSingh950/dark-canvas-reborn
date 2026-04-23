@@ -7,9 +7,15 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Kim Mi Hyo Gallery" },
-      { name: "description", content: "Founded in 2007 in Jinju, South Korea by artist and director Mi Hyo Kim." },
+      {
+        name: "description",
+        content: "Founded in 2007 in Jinju, South Korea by artist and director Mi Hyo Kim.",
+      },
       { property: "og:title", content: "About — Kim Mi Hyo Gallery" },
-      { property: "og:description", content: "A space dedicated to Korean and international contemporary art." },
+      {
+        property: "og:description",
+        content: "A space dedicated to Korean and international contemporary art.",
+      },
     ],
   }),
   component: AboutPage,
@@ -21,7 +27,9 @@ function AboutPage() {
       <section className="pt-44 pb-24 mx-auto max-w-[1600px] px-6 md:px-10">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-7">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">About the Gallery</p>
+            <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">
+              About the Gallery
+            </p>
             <h1 className="font-display text-[clamp(3rem,6vw,6rem)] leading-[0.95] text-ivory text-balance">
               A space for <em className="text-gold">infinite</em> potential.
             </h1>
@@ -31,7 +39,12 @@ function AboutPage() {
 
       <section className="mx-auto max-w-[1600px] px-6 md:px-10 pb-24">
         <div className="relative aspect-[21/9] overflow-hidden">
-          <img src={galleryImg} alt="Gallery interior" className="h-full w-full object-cover" loading="lazy" />
+          <img
+            src={galleryImg}
+            alt="Gallery interior"
+            className="h-full w-full object-cover"
+            loading="lazy"
+          />
           <div className="absolute inset-0 ring-1 ring-inset ring-border" />
         </div>
       </section>
@@ -43,20 +56,17 @@ function AboutPage() {
           </div>
           <div className="md:col-span-7 space-y-8 text-lg text-ivory leading-relaxed">
             <p>
-              Kim Mi Hyo Gallery was founded in 2007 in Jinju, South Korea by
-              artist and director Mi Hyo Kim — a space dedicated to Korean and
-              international contemporary art.
+              Kim Mi Hyo Gallery was founded in 2007 in Jinju, South Korea by artist and director Mi
+              Hyo Kim — a space dedicated to Korean and international contemporary art.
             </p>
             <p className="text-muted-foreground">
-              Inspired by the philosophy of infinite potential represented by
-              the number "0," the gallery bridges diverse artistic traditions
-              and has participated in over 100 global exhibitions since its
-              founding — from Art Gwangju to World Art Dubai.
+              Inspired by the philosophy of infinite potential represented by the number "0," the
+              gallery bridges diverse artistic traditions and has participated in over 100 global
+              exhibitions since its founding — from Art Gwangju to World Art Dubai.
             </p>
             <p className="text-muted-foreground">
-              Our programme moves between meditative field paintings, visionary
-              dreamscapes, and the elemental forces of emergence — works that
-              live, as we like to say, between worlds.
+              Our programme moves between meditative field paintings, visionary dreamscapes, and the
+              elemental forces of emergence — works that live, as we like to say, between worlds.
             </p>
           </div>
         </div>
