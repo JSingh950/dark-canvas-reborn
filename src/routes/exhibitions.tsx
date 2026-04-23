@@ -50,6 +50,26 @@ const exhibitions = [
   },
 ];
 
+const exhibitionsTimeline = [
+  {
+    year: 2025,
+    events: [
+      {
+        date: "Jan 15 – Mar 30, 2025",
+        title: "Cosmic Pulse: Selected Works",
+        venue: "Kim Mi Hyo Gallery, Jinju",
+      },
+      { date: "Apr 17, 2025", title: "World Art Dubai 2025", venue: "Dubai World Trade Centre" },
+      { date: "Apr 12 – Jun 8, 2025", title: "The Dreaming Eye", venue: "Main Hall, Jinju" },
+    ],
+  },
+  {
+    year: 2024,
+    events: [{ date: "Oct 23, 2024", title: "Art Gwangju 2024: Booth D-21", venue: "Gwangju" }],
+  },
+  { year: 2007, events: [{ date: "2007", title: "Gallery Founded", venue: "Jinju, South Korea" }] },
+];
+
 function ExhibitionsPage() {
   return (
     <>
@@ -62,6 +82,27 @@ function ExhibitionsPage() {
           A continuous dialogue between artist and viewer — selected presentations across our home
           in Jinju and partner spaces worldwide.
         </p>
+      </section>
+
+      <section className="mx-auto max-w-[1600px] px-6 md:px-10 py-20">
+        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">
+          Exhibitions Timeline
+        </h3>
+        <div className="space-y-10">
+          {exhibitionsTimeline.map((t) => (
+            <div key={t.year}>
+              <h4 className="font-display text-2xl text-ivory mb-4">{t.year}</h4>
+              <ul className="list-disc pl-6 text-muted-foreground">
+                {t.events.map((ev, idx) => (
+                  <li key={idx} className="mb-2">
+                    <strong className="text-ivory">{ev.title}</strong> — {ev.date} ·{" "}
+                    <span className="text-muted-foreground">{ev.venue}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
 
       <div className="hairline mx-auto max-w-[1600px]" />
