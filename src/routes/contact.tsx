@@ -44,8 +44,8 @@ function ContactPage() {
           <p className="text-ivory mb-4">Tuesday – Sunday · 11:00 – 18:00</p>
 
           <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold mb-2">Phone</h4>
-          <p className="text-ivory mb-1">+82 (10) 8643 2534 · Mobile</p>
-          <p className="text-ivory mb-4">+82 (862) 214 1862 · Gallery</p>
+          <p className="text-ivory mb-1">+1 (864) 325 3493 · Mobile</p>
+          <p className="text-ivory mb-4">+82 (10) 2428 7969 · Gallery</p>
 
           <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold mb-2">Direct</h4>
           <p className="text-ivory mb-2">
