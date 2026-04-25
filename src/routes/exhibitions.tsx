@@ -264,11 +264,6 @@ const memberships = [
   "Representative of Kim Mi Hyo Gallery",
 ];
 
-const contact = {
-  phone: "010.2428.7969",
-  email: "hoaga123@naver.com",
-};
-
 // ─── Timeline (for the existing timeline section) ────────────────────────────
 
 const exhibitionsTimeline = [
@@ -707,8 +702,8 @@ function ExhibitionsPage() {
 
       <div className="hairline mx-auto max-w-[1600px]" />
 
-      {/* Memberships & Contact */}
-      <section className="mx-auto max-w-[1600px] px-6 md:px-10 py-20 grid md:grid-cols-2 gap-16">
+      {/* Memberships */}
+      <section className="mx-auto max-w-[1600px] px-6 md:px-10 py-20">
         <div>
           <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">Memberships</h3>
           <ul className="list-disc pl-6 text-muted-foreground space-y-2">
@@ -717,7 +712,6 @@ function ExhibitionsPage() {
             ))}
           </ul>
         </div>
-        <div>
       </section>
     </>
   );
