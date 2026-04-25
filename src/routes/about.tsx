@@ -75,8 +75,8 @@ function AboutPage() {
           <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-12">Milestones</p>
           <div className="space-y-px bg-border">
             {[
-              ["2007", "Founded in Jinju, South Korea"],
               ["2003", "Mi Hyo Kim · Artist of the Year"],
+              ["2007", "Founded in Jinju, South Korea"],
               ["2018", "International exhibition programme launched"],
               ["2024", "Art Gwangju · Booth D-21"],
               ["2025", "World Art Dubai · Cosmic Pulse"],
