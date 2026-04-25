@@ -718,10 +718,6 @@ function ExhibitionsPage() {
           </ul>
         </div>
         <div>
-          <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold mb-6">Contact</h3>
-          <p className="text-muted-foreground">Phone: <span className="text-ivory">{contact.phone}</span></p>
-          <p className="text-muted-foreground mt-2">Email: <span className="text-ivory">{contact.email}</span></p>
-        </div>
       </section>
     </>
   );
